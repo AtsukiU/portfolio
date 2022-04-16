@@ -1,11 +1,11 @@
 import React from "react";
-import { Box, Divider, Flex, Image, Avatar } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 
 const SkillCard = (props) => {
   return (
-    <Box minW="330" maxW="370" px={10} py={"40px"}>
-      <Box w={"100%"} align={"center"}>
-        <Avatar src={props.SkillCardImage} size={"xl"} boxShadow={"xl"} />
+    <Box minW="310" w={310} px={10} pt={9}>
+      <Box w={"100%"} align={"center"} bg="transparent">
+        <Image w={56} src={props.SkillCardImage} />
       </Box>
 
       <Box pt={4}>{props.SkillCardTitle}</Box>

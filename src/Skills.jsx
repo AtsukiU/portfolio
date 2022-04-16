@@ -1,16 +1,17 @@
 import React from "react";
-import { Box, Divider, Flex } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import SkillCard from "./SkillCard";
-import HTMLCSSImage from "./pictures/jackson-so-wUbNvDTsOIc-unsplash.jpg";
-import ReactImage from "./pictures/javascript-with-laptop-code.jpg";
-import EnglishImage from "./pictures/annie-spratt-askpr0s66Rg-unsplash.jpg";
+import HTMLCSSImage from "./pictures/code.png";
+import ReactImage from "./pictures/atom.png";
+import EnglishImage from "./pictures/english.png";
 import SectionTitle from "./SectionTitle";
+import GithubImage from "./pictures/github.png";
 
 const Skills = () => {
   return (
-    <Box py={10} w={"100%"} fontWeight={"bold"}>
+    <Box py={10} w="100%" fontWeight={"bold"}>
       <SectionTitle>Skills</SectionTitle>
-      <Flex flexWrap={"wrap"} justifyContent="center" pt={10}>
+      <Flex flexWrap={"wrap"} justifyContent="center">
         <SkillCard
           SkillCardImage={HTMLCSSImage}
           SkillCardTitle={"HTML&CSS"}
@@ -22,6 +23,12 @@ const Skills = () => {
           SkillCardText={
             "Javascript、ReactでのWebサイト・Webアプリの制作。ChakraUI,StyledCompornent,FramerMotion,ReactRouter使用経験あり。"
           }
+        />
+
+        <SkillCard
+          SkillCardImage={GithubImage}
+          SkillCardTitle={"Github"}
+          SkillCardText={"Git,Githubを使ったレポジトリーの管理,ページの公開"}
         />
         <SkillCard
           SkillCardImage={EnglishImage}

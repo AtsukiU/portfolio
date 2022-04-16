@@ -12,7 +12,7 @@ const SchoolAndJob = () => {
   return (
     <Box fontWeight="bold" w={"100%"}>
       <SectionTitle>Education and Work Experience</SectionTitle>
-      <Box pt={10} w={"84%"} mx="auto" justifyContent={"center"}>
+      <Box w={"84%"} mx="auto" justifyContent={"center"}>
         <Flex
           p={6}
           mt={6}

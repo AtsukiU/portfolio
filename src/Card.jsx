@@ -1,4 +1,6 @@
-import React from "react";
+import { Button } from "@chakra-ui/button";
+import { Collapse } from "@chakra-ui/transition";
+import React, { useState } from "react";
 import {
   Box,
   Image,
@@ -8,14 +10,19 @@ import {
   Text,
   Heading,
   Link,
+  Flex,
+  Badge,
 } from "@chakra-ui/react";
 
 export default function Card(props) {
+  const MainColor = useColorModeValue("teal.400", "teal.100");
+  const [show, setShow] = React.useState(false);
+  const handleToggle = () => setShow(!show);
+
   return (
     <Center py={6} px={4}>
       <Box
-        h={"420px"}
-        w={"280px"}
+        w={"270px"}
         bg={useColorModeValue("gray.100", "gray.700")}
         boxShadow={"2xl"}
         rounded={"md"}
@@ -34,7 +41,7 @@ export default function Card(props) {
         </Box>
         <Stack>
           <Text
-            color={"cyan.500"}
+            color={MainColor}
             textTransform={"uppercase"}
             fontWeight={800}
             fontSize={"sm"}
@@ -42,18 +49,33 @@ export default function Card(props) {
           >
             {props.Title1}
           </Text>
+          <Heading fontSize={"2xl"} fontFamily={"body"}>
+            <Link
+              href={props.SiteURL}
+              color={useColorModeValue("gray.700", "white")}
+            >
+              {props.Title2}
+            </Link>
 
-          <Heading
-            color={useColorModeValue("gray.700", "white")}
-            fontSize={"2xl"}
-            fontFamily={"body"}
-          >
-            <Link href={props.SiteURL}>{props.Title2}</Link>
+            <Button
+              float="right"
+              size="sm"
+              colorScheme="teal"
+              variant="solid"
+              onClick={handleToggle}
+            >
+              {show ? "Close" : "Open"}
+            </Button>
           </Heading>
 
-          <Text color={"gray.500"} fontSize={"sm"}>
-            {props.Text}
-          </Text>
+          <Collapse in={show}>
+            <Badge mt={1} mb={3} colorScheme="teal">
+              {props.SkillBadge}
+            </Badge>
+            <Text color={"gray.500"} fontSize={"sm"}>
+              {props.Text}
+            </Text>
+          </Collapse>
         </Stack>
       </Box>
     </Center>

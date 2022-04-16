@@ -6,11 +6,13 @@ import Portfolio from "./Portfolio";
 import Skills from "./Skills";
 import Footer from "./Footer";
 
+
 function App() {
 
+  
 
   return (
-    <Box w={"100%"} >
+    <Box w="88%" mx="auto">
       <VStack>
         <Header />
         <MyAvatar />

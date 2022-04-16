@@ -1,12 +1,14 @@
 import React from "react";
-import { Box, Divider } from "@chakra-ui/react";
+import { Heading, Divider } from "@chakra-ui/react";
 
 const SectionTitle = (props) => {
   return (
-    <Box w={"83%"} mx="auto"  color={"cyan.500"}>
-      <Box fontSize={"2xl"}>{props.children}</Box>
+    <>
+      <Heading size="md" mb={1}>
+        {props.children}
+      </Heading>
       <Divider />
-    </Box>
+    </>
   );
 };
 
