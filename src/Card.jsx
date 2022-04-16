@@ -7,11 +7,12 @@ import {
   Stack,
   Text,
   Heading,
+  Link,
 } from "@chakra-ui/react";
 
 export default function Card(props) {
   return (
-    <Center  py={6} px={4}>
+    <Center py={6} px={4}>
       <Box
         h={"420px"}
         w={"280px"}
@@ -28,9 +29,8 @@ export default function Card(props) {
           mx={-6}
           mb={6}
           pos={"relative"}
-          
         >
-          <Image src={props.image} h="100%" w="100%" boxShadow={"sm"}  />
+          <Image src={props.image} h="100%" w="100%" boxShadow={"sm"} />
         </Box>
         <Stack>
           <Text
@@ -42,13 +42,15 @@ export default function Card(props) {
           >
             {props.Title1}
           </Text>
+
           <Heading
             color={useColorModeValue("gray.700", "white")}
             fontSize={"2xl"}
             fontFamily={"body"}
           >
-            {props.Title2}
+            <Link href={props.URL}>{props.Title2}</Link>
           </Heading>
+
           <Text color={"gray.500"} fontSize={"sm"}>
             {props.Text}
           </Text>

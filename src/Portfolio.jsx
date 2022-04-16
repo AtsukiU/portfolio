@@ -18,7 +18,7 @@ const Portfolio = () => {
           Text={
             "ポートフォリオサイトをReactとChakraUIを使用し作成しました。見やすいモダンな見た目を意識し、ダークモードも実装しました。"
           }
-          onClick={""}
+          URL={"https://portfolio-beta-murex-17.vercel.app/"}
         />
         <Card
           Title1={"React"}
@@ -26,7 +26,9 @@ const Portfolio = () => {
           image={PostItMemo}
           Text={
             "デスク周りに貼る付箋の代わりになるようなWEBアプリを目指し作成しました。利便性を考えモーダルを実装。FireBaseを使いデータ保持も可能に。"
+            
           }
+          URL={""}
         />
       </Center>
     </Box>
