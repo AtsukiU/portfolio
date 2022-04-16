@@ -48,7 +48,7 @@ export default function Card(props) {
             fontSize={"2xl"}
             fontFamily={"body"}
           >
-            <Link href={props.URL}>{props.Title2}</Link>
+            <Link href={props.SiteURL}>{props.Title2}</Link>
           </Heading>
 
           <Text color={"gray.500"} fontSize={"sm"}>

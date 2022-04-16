@@ -7,7 +7,7 @@ import SectionTitle from "./SectionTitle";
 
 const Portfolio = () => {
   return (
-    <Box  fontWeight="bold" w={"100%"}>
+    <Box fontWeight="bold" w={"100%"}>
       <SectionTitle>{"Portfolio"}</SectionTitle>
 
       <Center pt={10} flexWrap={"wrap"}>
@@ -18,7 +18,7 @@ const Portfolio = () => {
           Text={
             "ポートフォリオサイトをReactとChakraUIを使用し作成しました。見やすいモダンな見た目を意識し、ダークモードも実装しました。"
           }
-          URL={"https://portfolio-beta-murex-17.vercel.app/"}
+          SiteURL={"https://portfolio-beta-murex-17.vercel.app/"}
         />
         <Card
           Title1={"React"}
@@ -26,9 +26,8 @@ const Portfolio = () => {
           image={PostItMemo}
           Text={
             "デスク周りに貼る付箋の代わりになるようなWEBアプリを目指し作成しました。利便性を考えモーダルを実装。FireBaseを使いデータ保持も可能に。"
-            
           }
-          URL={""}
+          SiteURL={"https://react-post-it.vercel.app/"}
         />
       </Center>
     </Box>
