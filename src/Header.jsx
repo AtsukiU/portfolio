@@ -1,7 +1,7 @@
 import { Heading, IconButton, Flex } from "@chakra-ui/react";
 import { useColorMode, useColorModeValue } from "@chakra-ui/color-mode";
-import { FaSun, FaMoon, FaGithub, FaEnvelope } from "react-icons/fa";
-import { BsSun, BsMoonStarsFill } from "react-icons/bs";
+import { FaSun, FaGithub, FaEnvelope } from "react-icons/fa";
+import { BsMoonStarsFill } from "react-icons/bs";
 
 function Header() {
   const { colorMode, toggleColorMode } = useColorMode();

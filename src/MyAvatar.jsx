@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Box,
   Text,
@@ -6,7 +6,6 @@ import {
   IconButton,
   useDisclosure,
   Collapse,
-  Heading,
   Badge,
   Flex,
 } from "@chakra-ui/react";
