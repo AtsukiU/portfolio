@@ -12,11 +12,11 @@ function App() {
   
 
   return (
-    <Box w="88%" mx="auto">
+    <Box  mx="auto" w="88%" maxWidth="1120px">
       <VStack>
         <Header />
         <MyAvatar />
-        <Portfolio />
+        <Portfolio/>
         <Skills />
         <SchoolAndJob />
         <Footer/>

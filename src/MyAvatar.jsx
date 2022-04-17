@@ -46,21 +46,41 @@ const MyAvatar = () => {
       <Collapse in={isOpen} animateOpacity>
         <Box maxW={500} mt={23} mx="auto">
           <Flex pb={2}>
-            <Badge h={5}>出身</Badge>　<Box fontSize="sm">山梨県</Box>
+            <Badge h={5} colorScheme="teal">
+              出身
+            </Badge>
+            　<Box fontSize="sm">山梨県</Box>
           </Flex>
           <Flex pb={2}>
-            <Badge h={5}>年齢</Badge>　<Box fontSize="sm">24歳</Box>
+            <Badge h={5} colorScheme="teal">
+              年齢
+            </Badge>
+            　<Box fontSize="sm">24歳</Box>
           </Flex>
           <Flex pb={2}>
             {" "}
-            <Badge h={5}>趣味</Badge>　
+            <Badge h={5} colorScheme="teal">
+              趣味
+            </Badge>
+            　
             <Box fontSize="sm">
               プログラミング　サッカー　釣り　アクアリウム　お酒　ギター　ゲーム　旅行　自作PC
             </Box>
           </Flex>
           <Flex pb={2}>
-            <Badge h={5}>長所</Badge>　
-            <Box fontSize="sm">集中力　好奇心　独学力</Box>
+            <Badge h={5} colorScheme="teal">
+              長所
+            </Badge>
+            　<Box fontSize="sm">集中力　好奇心　独学力</Box>
+          </Flex>
+          <Flex pb={2}>
+            <Badge h={5} colorScheme="teal">
+              自己紹介
+            </Badge>
+            　
+            <Box fontSize="sm">
+              独学で始めたプログラミングに夢中になり、自主的に制作を行なっています。新しいことを学ぶことが好きなので、今後も楽しみながらやっていきたいと考えています。
+            </Box>
           </Flex>
         </Box>
       </Collapse>

@@ -1,7 +1,9 @@
-import { Heading, IconButton, Flex } from "@chakra-ui/react";
+import { Heading, IconButton, Flex, Image, Icon } from "@chakra-ui/react";
 import { useColorMode, useColorModeValue } from "@chakra-ui/color-mode";
 import { FaSun, FaGithub, FaEnvelope } from "react-icons/fa";
 import { BsMoonStarsFill } from "react-icons/bs";
+import HeaderLogoLight from "./pictures/logo teal.400.png";
+import HeaderLogoDark from "./pictures/logo teal.png";
 
 function Header() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -16,26 +18,14 @@ function Header() {
       zIndex={9999}
       bg={isDark ? "gray.800" : "white"}
     >
-      <Heading w="100%" size="md" p="2" color={MainColor}>
-        MyPortfolio
+      <Heading w="100%" size="md" p="2" color="white">
+        <Image src={isDark ? HeaderLogoDark : HeaderLogoLight} />
       </Heading>
-
-      <IconButton
-        icon={<FaEnvelope />}
-        bg={"transparent"}
-        color="gray.400"
-      ></IconButton>
-
-      <IconButton
-        icon={<FaGithub />}
-        bg={"transparent"}
-        color="gray.400"
-      ></IconButton>
 
       <IconButton
         icon={isDark ? <FaSun /> : <BsMoonStarsFill />}
         color={isDark ? "gray.600" : "white"}
-        bg={isDark ? "orange.100" : "blue.400"}
+        bg={isDark ? "orange.100" : "blue.700"}
         onClick={toggleColorMode}
       ></IconButton>
     </Flex>
