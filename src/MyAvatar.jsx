@@ -49,13 +49,19 @@ const MyAvatar = () => {
             <Badge h={5} colorScheme="teal">
               出身
             </Badge>
-            　<Box fontSize="sm">山梨県</Box>
+            　
+            <Box fontSize="sm" pl={6}>
+              山梨県
+            </Box>
           </Flex>
           <Flex pb={2}>
             <Badge h={5} colorScheme="teal">
               年齢
             </Badge>
-            　<Box fontSize="sm">24歳</Box>
+            　
+            <Box fontSize="sm" pl={6}>
+              24歳
+            </Box>
           </Flex>
           <Flex pb={2}>
             {" "}
@@ -63,7 +69,7 @@ const MyAvatar = () => {
               趣味
             </Badge>
             　
-            <Box fontSize="sm">
+            <Box fontSize="sm" pl={6}>
               プログラミング　サッカー　釣り　アクアリウム　お酒　ギター　ゲーム　旅行　自作PC
             </Box>
           </Flex>
@@ -71,7 +77,10 @@ const MyAvatar = () => {
             <Badge h={5} colorScheme="teal">
               長所
             </Badge>
-            　<Box fontSize="sm">集中力　好奇心　独学力</Box>
+            　
+            <Box fontSize="sm" pl={6}>
+              集中力　好奇心　独学力
+            </Box>
           </Flex>
           <Flex pb={2}>
             <Badge h={5} colorScheme="teal">
