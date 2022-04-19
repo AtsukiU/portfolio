@@ -11,7 +11,7 @@ const Skills = () => {
   return (
     <Box py={10} w="100%" fontWeight={"bold"}>
       <SectionTitle>Skills</SectionTitle>
-      <Flex minW="320" maxW="950" mx="auto" flexWrap={"wrap"}>
+      <Flex  flexWrap={"wrap"} justifyContent="center">
         <SkillCard
           SkillCardImage={HTMLCSSImage}
           SkillCardTitle={"HTML&CSS"}
