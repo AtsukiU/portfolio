@@ -17,8 +17,8 @@ const MyAvatar = () => {
 
   return (
     <Box w="100%" pb={10}>
-      <Box align={"center"}>
-        <Box pt="100px">
+      <Box>
+        <Flex pt="80px" justifyContent="center">
           <Avatar
             size="2xl"
             src={AvatarImage}
@@ -28,71 +28,81 @@ const MyAvatar = () => {
             borderWidth={2}
             borderStyle="solid"
           ></Avatar>
-        </Box>
-        <Text alignItems="none" fontSize="3xl" fontWeight="bold" pt={"30px"}>
-          Atsuki Ueda
-        </Text>
+          <Box pl={5}>
+            <Text
+              alignItems="none"
+              fontSize="3xl"
+              fontWeight="bold"
+              pt={"30px"}
+            >
+              Atsuki Ueda
+            </Text>
 
-        <Text color="gray" fontSize={"md"}>
-          1998.02.06 Age24
-        </Text>
-        <IconButton
-          icon={isOpen ? <FaAngleDoubleUp /> : <FaAngleDoubleDown />}
-          mt={5}
-          bg="transparent"
-          onClick={onToggle}
-        ></IconButton>
+            <Text color="gray" fontSize={"md"}>
+              植田 充輝
+              <br />
+              1998.02.06 Age24
+            </Text>
+            <IconButton
+              icon={isOpen ? <FaAngleDoubleUp /> : <FaAngleDoubleDown />}
+              mt={5}
+              bg="transparent"
+              onClick={onToggle}
+            ></IconButton>
+          </Box>
+        </Flex>
+
+        <Collapse in={isOpen} animateOpacity>
+          <Box maxW={500} mt={23} mx="auto">
+            <Flex pb={2}>
+              <Badge h={5} colorScheme="teal">
+                出身
+              </Badge>
+              　
+              <Box fontSize="sm" pl={6}>
+                山梨県
+              </Box>
+            </Flex>
+            <Flex pb={2}>
+              <Badge h={5} colorScheme="teal">
+                年齢
+              </Badge>
+              　
+              <Box fontSize="sm" pl={6}>
+                24歳
+              </Box>
+            </Flex>
+            <Flex pb={2}>
+              {" "}
+              <Badge h={5} colorScheme="teal">
+                趣味
+              </Badge>
+              　
+              <Box fontSize="sm" pl={6}>
+                プログラミング　サッカー　釣り　アクアリウム　お酒　ギター　ゲーム　旅行　自作PC
+              </Box>
+            </Flex>
+            <Flex pb={2}>
+              <Badge h={5} colorScheme="teal">
+                長所
+              </Badge>
+              　
+              <Box fontSize="sm" pl={6}>
+                集中力　好奇心　独学力
+              </Box>
+            </Flex>
+            <Flex pb={2}>
+              <Badge h={5} colorScheme="teal">
+                自己紹介
+              </Badge>
+              　
+              <Box fontSize="sm">
+                独学で始めたプログラミングに夢中になり、自主的に制作を行なっています。新しいことを学ぶことが好きなので、今後も楽しみながらやっていきたいと考えています。
+              </Box>
+            </Flex>
+          </Box>
+        </Collapse>
       </Box>
-      <Collapse in={isOpen} animateOpacity>
-        <Box maxW={500} mt={23} mx="auto">
-          <Flex pb={2}>
-            <Badge h={5} colorScheme="teal">
-              出身
-            </Badge>
-            　
-            <Box fontSize="sm" pl={6}>
-              山梨県
-            </Box>
-          </Flex>
-          <Flex pb={2}>
-            <Badge h={5} colorScheme="teal">
-              年齢
-            </Badge>
-            　
-            <Box fontSize="sm" pl={6}>
-              24歳
-            </Box>
-          </Flex>
-          <Flex pb={2}>
-            {" "}
-            <Badge h={5} colorScheme="teal">
-              趣味
-            </Badge>
-            　
-            <Box fontSize="sm" pl={6}>
-              プログラミング　サッカー　釣り　アクアリウム　お酒　ギター　ゲーム　旅行　自作PC
-            </Box>
-          </Flex>
-          <Flex pb={2}>
-            <Badge h={5} colorScheme="teal">
-              長所
-            </Badge>
-            　
-            <Box fontSize="sm" pl={6}>
-              集中力　好奇心　独学力
-            </Box>
-          </Flex>
-          <Flex pb={2}>
-            <Badge h={5} colorScheme="teal">
-              自己紹介
-            </Badge>
-            　
-            <Box fontSize="sm">
-              独学で始めたプログラミングに夢中になり、自主的に制作を行なっています。新しいことを学ぶことが好きなので、今後も楽しみながらやっていきたいと考えています。
-            </Box>
-          </Flex>
-        </Box>
-      </Collapse>
     </Box>
   );
 };

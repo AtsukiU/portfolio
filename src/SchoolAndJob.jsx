@@ -10,7 +10,7 @@ import SectionTitle from "./SectionTitle";
 
 const SchoolAndJob = () => {
   return (
-    <Box fontWeight="bold" w={"100%"}>
+    <Box fontWeight="bold" w={"100%"} >
       <SectionTitle>Education and Work Experience</SectionTitle>
       <Box w={"84%"} mx="auto" justifyContent={"center"}>
         <Flex

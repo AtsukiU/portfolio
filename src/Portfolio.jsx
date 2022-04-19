@@ -7,7 +7,7 @@ import SectionTitle from "./SectionTitle";
 
 const Portfolio = () => {
   return (
-    <Box fontWeight="bold" w={"100%"}>
+    <Box fontWeight="bold" w={"100%"} >
       <SectionTitle>{"Portfolio"}</SectionTitle>
 
       <Center pt={5} flexWrap={"wrap"}>
