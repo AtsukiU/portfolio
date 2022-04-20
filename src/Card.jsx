@@ -71,7 +71,7 @@ export default function Card(props) {
               {props.Text}
             </Text>
             <Center>
-              <Button w="100%" size="sm" colorScheme="teal" mt={3}>
+              <Button w="100%" size="sm" colorScheme="purple" mt={3}>
                 <Link href={props.SiteURL}>View Portfolio</Link>
               </Button>
             </Center>
