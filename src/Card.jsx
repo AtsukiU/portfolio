@@ -50,12 +50,7 @@ export default function Card(props) {
             {props.Title1}
           </Text>
           <Heading fontSize={"2xl"} fontFamily={"body"}>
-            <Link
-              href={props.SiteURL}
-              color={useColorModeValue("gray.700", "white")}
-            >
-              {props.Title2}
-            </Link>
+            {props.Title2}
 
             <Button
               float="right"
@@ -75,6 +70,11 @@ export default function Card(props) {
             <Text color={"gray.500"} fontSize={"sm"}>
               {props.Text}
             </Text>
+            <Center>
+              <Button w="100%" size="sm" colorScheme="teal" mt={3}>
+                <Link href={props.SiteURL}>View Portfolio</Link>
+              </Button>
+            </Center>
           </Collapse>
         </Stack>
       </Box>

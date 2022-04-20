@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Image } from "@chakra-ui/react";
+import { Box, Image ,Button} from "@chakra-ui/react";
 
 const SkillCard = (props) => {
   return (
@@ -12,6 +12,7 @@ const SkillCard = (props) => {
       <Box pt={1} fontSize={"sm"} color={"gray"}>
         {props.SkillCardText}
       </Box>
+      
     </Box>
   );
 };
