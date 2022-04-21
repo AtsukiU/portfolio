@@ -7,7 +7,7 @@ import SectionTitle from "./SectionTitle";
 
 const Portfolio = () => {
   return (
-    <Box fontWeight="bold" w={"100%"} >
+    <Box fontWeight="bold" w={"100%"}>
       <SectionTitle>{"Portfolio"}</SectionTitle>
 
       <Center pt={5} flexWrap={"wrap"}>
@@ -30,6 +30,16 @@ const Portfolio = () => {
             "デスク周りに貼る付箋の代わりになるようなWEBアプリを目指し作成しました。利便性を考えモーダルを実装。FireBaseを使いデータ保持も可能に。"
           }
           SiteURL={"https://react-post-it.vercel.app/"}
+        />
+        <Card
+          Title1={"PHP+(next.js or react)"}
+          Title2={"EC(作成中)"}
+          image={""}
+          SkillBadge={"(FramerMotion + chakraUI) "}
+          Text={
+            " ECデモサイトをバックエンドをPHP、フロントはreactかnextjsで作成予定"
+          }
+          SiteURL={""}
         />
       </Center>
     </Box>
