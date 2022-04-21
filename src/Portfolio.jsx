@@ -4,6 +4,7 @@ import Card from "./Card";
 import PostItMemo from "./pictures/screencapture-localhost-3001-2022-04-13-23_06_31.png";
 import MyPortfolioImage from "./pictures/screencapture-localhost-3000-2022-04-11-18_15_38.png";
 import SectionTitle from "./SectionTitle";
+import edit from "./pictures/New file.png";
 
 const Portfolio = () => {
   return (
@@ -34,7 +35,7 @@ const Portfolio = () => {
         <Card
           Title1={"PHP+(next.js or react)"}
           Title2={"EC(作成中)"}
-          image={""}
+          image={edit}
           SkillBadge={"(FramerMotion + chakraUI) "}
           Text={
             " ECデモサイトをバックエンドをPHP、フロントはreactかnextjsで作成予定"
