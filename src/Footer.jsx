@@ -6,7 +6,6 @@ const Footer = () => {
     <Box
       color="gray"
       fontSize="xs"
-      pt={20}
       pb={1}
       w={"100%"}
       bottom={"0"}

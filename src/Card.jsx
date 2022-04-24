@@ -18,7 +18,7 @@ export default function Card(props) {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Center py={6} px={4}>
+    <Center pb={6} px={4}>
       <Box
         w={"270px"}
         bg={useColorModeValue("white", "gray.900")}

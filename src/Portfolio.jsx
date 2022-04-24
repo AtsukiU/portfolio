@@ -7,7 +7,7 @@ import edit from "./pictures/New file.png";
 
 const Portfolio = () => {
   return (
-    <Box fontWeight="bold" py={10} pb={20}>
+    <Box fontWeight="bold" pb={10} >
       <Center flexWrap={"wrap"}>
         <Card
           Title1={"React"}

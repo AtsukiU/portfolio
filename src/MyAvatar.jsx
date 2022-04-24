@@ -21,7 +21,7 @@ const MyAvatar = () => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box pt={10}>
+    <Box pb={5}>
       <Box>
         {/* <Flex pt="20px" justifyContent="center">
           <Avatar

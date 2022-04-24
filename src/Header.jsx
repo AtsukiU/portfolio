@@ -35,7 +35,8 @@ function Header() {
       <Flex
         py={{ base: 2 }}
         px={{ base: 4 }}
-        minH={"60px"}
+        minH={"20px"}
+        maxH={"50px"}
         w="100%"
         borderBottom={1}
         borderStyle={"solid"}
