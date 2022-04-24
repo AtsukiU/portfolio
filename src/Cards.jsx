@@ -1,29 +1,17 @@
-import { Box, Center, Icon } from "@chakra-ui/react";
 import React from "react";
 import Card from "./Card";
+import { Flex, Box, Center } from "@chakra-ui/react";
 import PostItMemo from "./pictures/screencapture-localhost-3001-2022-04-13-23_06_31.png";
 import MyPortfolioImage from "./pictures/MyPortfolio.png";
 import edit from "./pictures/New file.png";
-import Slider from "react-slick";
+import SectionTitle from "./SectionTitle";
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
-const Portfolio = () => {
-  const settings = {
-    infinite: true,
-    speed: 2000,
-    autoplaySpeed: 3000,
-    autoplay: true,
-    centerPadding: "60px",
-    pauseOnHover: true,
-    slidesToScrool: 1,
-  };
-
+const Cards = () => {
   return (
-    <Box fontWeight="bold" pb={10}>
-      <Box mx={"auto"} overflow={"hidden"}>
-        <Slider {...settings}>
+    <Box>
+      <SectionTitle>Portfolio</SectionTitle>
+      <Center>
+        <Flex justifyContent={"center"} flexWrap={"wrap"}>
           <Card
             Title1={"React"}
             Title2={"MyPortfolio"}
@@ -56,10 +44,10 @@ const Portfolio = () => {
             }
             SiteURL={""}
           />
-        </Slider>
-      </Box>
+        </Flex>
+      </Center>
     </Box>
   );
 };
 
-export default Portfolio;
+export default Cards;

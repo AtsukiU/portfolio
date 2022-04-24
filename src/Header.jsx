@@ -24,7 +24,7 @@ function Header() {
   const HoverBgColor = useColorModeValue("gray.100", "gray.600");
 
   const navItem = [
-    { label: "Portfolio", href: "/" },
+    { label: "Portfolio", href: "/portfolio" },
     { label: "Skill", href: "/skill" },
     { label: "Experience", href: "/experience" },
     { label: "Contact", href: "/contact" },

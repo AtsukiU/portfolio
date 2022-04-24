@@ -5,9 +5,9 @@ import { Box } from "@chakra-ui/react";
 
 function App() {
   return (
-    <div className="App" >
+    <div className="App">
       <Header />
-      <Box   mx="auto" minH="100vh">
+      <Box>
         <Router />
       </Box>
       <Footer />

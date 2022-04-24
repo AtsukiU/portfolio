@@ -18,9 +18,10 @@ export default function Card(props) {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Center pb={6} px={4}>
+    <Center mb={20} px={4}>
       <Box
         w={"270px"}
+        minW={"270px"}
         bg={useColorModeValue("white", "gray.900")}
         boxShadow={"2xl"}
         borderWidth="1px"
@@ -28,7 +29,6 @@ export default function Card(props) {
         rounded={"md"}
         p={6}
         overflow={"hidden"}
-        onClick={onToggle}
       >
         <Box
           h={"220px"}
@@ -57,17 +57,28 @@ export default function Card(props) {
           </Text>
           <Heading fontSize={"2xl"} fontFamily={"body"}>
             {props.Title2}
-
-            {/* <Button
-              float="right"
-              size="sm"
-              colorScheme="teal"
-              variant="solid"
-              onClick={handleToggle}
-            >
-              {show ? "Close" : "Open"}
-            </Button> */}
           </Heading>
+
+          <Button
+            mt={2}
+            size={"sm"}
+            fontSize={"sm"}
+            rounded={"full"}
+            bg={"blue.400"}
+            color={"white"}
+            boxShadow={
+              "0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)"
+            }
+            _hover={{
+              bg: "blue.500",
+            }}
+            _focus={{
+              bg: "blue.500",
+            }}
+            onClick={onToggle}
+          >
+            {isOpen ? "Close" : "See More"}
+          </Button>
 
           <Collapse in={isOpen}>
             <Badge mt={2}>使用技術</Badge>
