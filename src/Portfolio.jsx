@@ -12,8 +12,8 @@ import "slick-carousel/slick/slick-theme.css";
 const Portfolio = () => {
   const settings = {
     infinite: true,
-    speed: 2000,
-    autoplaySpeed: 3000,
+    speed: 4000,
+    autoplaySpeed: 4000,
     autoplay: true,
     centerPadding: "60px",
     pauseOnHover: true,
