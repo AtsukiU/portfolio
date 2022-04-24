@@ -38,7 +38,12 @@ export default function Card(props) {
           mb={6}
           pos={"relative"}
         >
-          <Image src={props.image} h="100%" w="100%" boxShadow={"sm"} />
+          <Image
+            src={props.image}
+            objectFit="cover"
+            boxSize="100%"
+            boxShadow={"sm"}
+          />
         </Box>
         <Stack>
           <Text
@@ -65,15 +70,15 @@ export default function Card(props) {
           </Heading>
 
           <Collapse in={isOpen}>
-            <Badge mt={2} >
-              使用技術
-            </Badge>
-            <Text fontSize={"sm"} color={"gray.500"}>{props.Skilltext}</Text>
-            <Badge mt={2}>
-              制作期間
-            </Badge>
-            <Text fontSize={"sm"} color={"gray.500"}>{props.term}</Text>
-            <Text mt={3}　fontSize={"sm"} color={"gray.500"} >
+            <Badge mt={2}>使用技術</Badge>
+            <Text fontSize={"sm"} color={"gray.500"}>
+              {props.Skilltext}
+            </Text>
+            <Badge mt={2}>制作期間</Badge>
+            <Text fontSize={"sm"} color={"gray.500"}>
+              {props.term}
+            </Text>
+            <Text mt={3} fontSize={"sm"} color={"gray.500"}>
               {props.Text}
             </Text>
 

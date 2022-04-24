@@ -2,7 +2,7 @@ import { Box, Center } from "@chakra-ui/layout";
 import React from "react";
 import Card from "./Card";
 import PostItMemo from "./pictures/screencapture-localhost-3001-2022-04-13-23_06_31.png";
-import MyPortfolioImage from "./pictures/screencapture-localhost-3000-2022-04-11-18_15_38.png";
+import MyPortfolioImage from "./pictures/MyPortfolio.png";
 import edit from "./pictures/New file.png";
 
 const Portfolio = () => {
