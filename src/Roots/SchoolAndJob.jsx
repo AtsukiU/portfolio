@@ -1,34 +1,34 @@
 import React from "react";
-import {
-  Box,
-  Center,
-  Divider,
-  Flex,
-  useColorModeValue,
-} from "@chakra-ui/react";
-import SectionTitle from "./SectionTitle";
+import { Box, Flex, useColorModeValue } from "@chakra-ui/react";
+import SectionTitle from "../SectionTitle";
 
 const SchoolAndJob = () => {
   return (
-    <Box fontWeight="bold" w={"100%"} >
+    <Box fontWeight="bold" w={"100%"} h="100vh">
       <SectionTitle>Education and Work Experience</SectionTitle>
       <Box w={"84%"} mx="auto" justifyContent={"center"}>
         <Flex
           p={6}
           mt={6}
+          bg={useColorModeValue("white", "gray.900")}
+          boxShadow={"2xl"}
+          borderWidth="1px"
+          borderRadius="lg"
           rounded={"md"}
-          bg={useColorModeValue("gray.100", "gray.700")}
-          boxShadow={"xl"}
+          overflow={"hidden"}
           flexWrap={"wrap"}
         >
-          <Box>日本郵便株式会社</Box>　<Box color={"gray"}>2020.4 - 2022</Box>
+          <Box>某金融系企業</Box>　<Box color={"gray"}>2020.4 - 2022</Box>
         </Flex>
         <Flex
           p={6}
           mt={6}
+          bg={useColorModeValue("white", "gray.900")}
+          boxShadow={"2xl"}
+          borderWidth="1px"
+          borderRadius="lg"
           rounded={"md"}
-          bg={useColorModeValue("gray.100", "gray.700")}
-          boxShadow={"xl"}
+          overflow={"hidden"}
           flexWrap={"wrap"}
         >
           <Box>専修大学　</Box> <Box pr={4}>経済学部経済学科</Box>

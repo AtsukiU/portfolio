@@ -2,23 +2,28 @@ import React from "react";
 import {
   Box,
   Text,
-  Avatar,
-  IconButton,
   useDisclosure,
   Collapse,
   Badge,
   Flex,
+  Center,
+  Stack,
+  Image,
+  Heading,
+  Link,
+  Button,
+  useColorModeValue,
 } from "@chakra-ui/react";
-import AvatarImage from "./pictures/MyProfileImage.jpg";
-import { FaAngleDoubleDown, FaAngleDoubleUp } from "react-icons/fa";
+import AvatarImage from "./pictures/IMG_9672.jpg";
+import { Link as RouteLink } from "react-router-dom";
 
 const MyAvatar = () => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box w="100%" pb={10}>
+    <Box pt={10}>
       <Box>
-        <Flex pt="80px" justifyContent="center">
+        {/* <Flex pt="20px" justifyContent="center">
           <Avatar
             size="2xl"
             src={AvatarImage}
@@ -33,7 +38,7 @@ const MyAvatar = () => {
               alignItems="none"
               fontSize="3xl"
               fontWeight="bold"
-              pt={"30px"}
+              pt={"15px"}
             >
               Atsuki Ueda
             </Text>
@@ -50,59 +55,181 @@ const MyAvatar = () => {
               onClick={onToggle}
             ></IconButton>
           </Box>
-        </Flex>
+        </Flex> */}
 
-        <Collapse in={isOpen} animateOpacity>
-          <Box maxW={500} mt={23} mx="auto">
-            <Flex pb={2}>
-              <Badge h={5} colorScheme="teal">
-                出身
-              </Badge>
-              　
-              <Box fontSize="sm" pl={6}>
-                山梨県
-              </Box>
+        <Center py={6}>
+          <Stack
+            borderWidth="1px"
+            borderRadius="lg"
+            w={{ base: "400px", md: "540px" }}
+            mx={{ base: "20px", md: "20px" }}
+            direction={{ base: "column", md: "row" }}
+            bg={useColorModeValue("white", "gray.900")}
+            boxShadow={"2xl"}
+            padding={4}
+          >
+            <Flex flex={1} bg="blue.200">
+              <Image objectFit="cover" boxSize="100%" src={AvatarImage} />
             </Flex>
-            <Flex pb={2}>
-              <Badge h={5} colorScheme="teal">
-                年齢
-              </Badge>
-              　
-              <Box fontSize="sm" pl={6}>
-                24歳
-              </Box>
-            </Flex>
-            <Flex pb={2}>
-              {" "}
-              <Badge h={5} colorScheme="teal">
-                趣味
-              </Badge>
-              　
-              <Box fontSize="sm" pl={6}>
-                プログラミング　サッカー　釣り　アクアリウム　お酒　ギター　ゲーム　旅行　自作PC
-              </Box>
-            </Flex>
-            <Flex pb={2}>
-              <Badge h={5} colorScheme="teal">
-                長所
-              </Badge>
-              　
-              <Box fontSize="sm" pl={6}>
-                集中力　好奇心　独学力
-              </Box>
-            </Flex>
-            <Flex pb={2}>
-              <Badge h={5} colorScheme="teal">
-                自己紹介
-              </Badge>
-              　
-              <Box fontSize="sm">
-                独学で始めたプログラミングに夢中になり、自主的に制作を行なっています。新しいことを学ぶことが好きなので、今後も楽しみながらやっていきたいと考えています。
-              </Box>
-            </Flex>
-          </Box>
-        </Collapse>
+            <Stack
+              flex={1}
+              flexDirection="column"
+              justifyContent="center"
+              alignItems="center"
+              p={1}
+              pt={2}
+            >
+              <Heading fontSize={"2xl"} fontFamily={"body"}>
+                Atsuki Ueda
+              </Heading>
+              <Text fontSize="sm" fontWeight={600} color={"gray.500"} mb={4}>
+                植田 充輝
+              </Text>
+              <Text
+                textAlign={"center"}
+                color={useColorModeValue("gray.700", "gray.400")}
+                px={3}
+                size={"xs"}
+              >
+                Web engineer from Yamanashi Japan.I love design and new
+                technology.
+                <Link href={"https://github.com/AtsukiU/"} color={"blue.400"}>
+                  Github＠AtsukiU
+                </Link>
+              </Text>
+              <Stack
+                align={"center"}
+                justify={"center"}
+                direction={"row"}
+                mt={6}
+              >
+                <Badge
+                  px={2}
+                  py={1}
+                  bg={useColorModeValue("gray.50", "gray.800")}
+                  fontWeight={"400"}
+                >
+                  #travel
+                </Badge>
+                <Badge
+                  px={2}
+                  py={1}
+                  bg={useColorModeValue("gray.50", "gray.800")}
+                  fontWeight={"400"}
+                >
+                  #guitar
+                </Badge>
+                <Badge
+                  px={2}
+                  py={1}
+                  bg={useColorModeValue("gray.50", "gray.800")}
+                  fontWeight={"400"}
+                >
+                  #music
+                </Badge>
+              </Stack>
+
+              <Stack
+                width={"100%"}
+                mt={"2rem"}
+                direction={"row"}
+                padding={2}
+                justifyContent={"space-between"}
+                alignItems={"center"}
+              >
+                <Button
+                  flex={1}
+                  fontSize={"sm"}
+                  rounded={"full"}
+                  as={RouteLink}
+                  to={"/contact"}
+                  _focus={{
+                    bg: "gray.200",
+                  }}
+                >
+                  Message
+                </Button>
+                <Button
+                  flex={1}
+                  fontSize={"sm"}
+                  rounded={"full"}
+                  bg={"blue.400"}
+                  color={"white"}
+                  boxShadow={
+                    "0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)"
+                  }
+                  onClick={onToggle}
+                  _hover={{
+                    bg: "blue.500",
+                  }}
+                  _focus={{
+                    bg: "blue.500",
+                  }}
+                >
+                  {isOpen ? "Close" : "See More"}
+                </Button>
+              </Stack>
+            </Stack>
+          </Stack>
+        </Center>
+        {/* <Center>
+          <IconButton
+            icon={isOpen ? <FaAngleDoubleUp /> : <FaAngleDoubleDown />}
+            bg="transparent"
+            onClick={onToggle}
+          ></IconButton>
+        </Center> */}
       </Box>
+      <Collapse in={isOpen} animateOpacity>
+        <Box maxW={500} px={4} mt={23} mx="auto">
+          <Flex pb={2}>
+            <Badge h={5} colorScheme="blue">
+              出身
+            </Badge>
+            　
+            <Box fontSize="sm" pl={6}>
+              山梨県
+            </Box>
+          </Flex>
+          <Flex pb={2}>
+            <Badge h={5} colorScheme="blue">
+              年齢
+            </Badge>
+            　
+            <Box fontSize="sm" pl={6}>
+              24歳
+            </Box>
+          </Flex>
+          <Flex pb={2}>
+            {" "}
+            <Badge h={5} colorScheme="blue">
+              趣味
+            </Badge>
+            　
+            <Box fontSize="sm" pl={6}>
+              気になったら取り敢えず挑戦してみるタイプなので、ギター弾いたり、アクアリウム始めたり、パソコン組んでみたり、英語の勉強してみたり、色々なことに挑戦しています。中高サッカー部なのでサッカーも大好きで、定期的にやってます。
+            </Box>
+          </Flex>
+          <Flex pb={2}>
+            <Badge h={5} colorScheme="blue">
+              長所
+            </Badge>
+            　
+            <Box fontSize="sm" pl={6}>
+              好きなことへの集中力・継続力には自信があります。
+            </Box>
+          </Flex>
+          <Flex pb={2}>
+            <Badge h={5} colorScheme="blue">
+              自己紹介
+            </Badge>
+            　
+            <Box fontSize="sm">
+              山梨県生まれ。大学卒業後某金融機関に勤務。プログラミングに興味を持ち、独学で学習。日々技術をアップデートしています。今後はフロントエンド・バックエンド問わず学習してみたいと思っています。
+            </Box>
+          </Flex>
+        </Box>
+      </Collapse>
     </Box>
   );
 };

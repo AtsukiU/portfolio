@@ -1,6 +1,6 @@
 import { Button } from "@chakra-ui/button";
 import { Collapse } from "@chakra-ui/transition";
-import React, { useState } from "react";
+import React from "react";
 import {
   Box,
   Image,
@@ -10,24 +10,25 @@ import {
   Text,
   Heading,
   Link,
-  Flex,
   Badge,
+  useDisclosure,
 } from "@chakra-ui/react";
 
 export default function Card(props) {
-  const MainColor = useColorModeValue("teal.400", "teal.100");
-  const [show, setShow] = React.useState(false);
-  const handleToggle = () => setShow(!show);
+  const { isOpen, onToggle } = useDisclosure();
 
   return (
     <Center py={6} px={4}>
       <Box
         w={"270px"}
-        bg={useColorModeValue("gray.100", "gray.700")}
+        bg={useColorModeValue("white", "gray.900")}
         boxShadow={"2xl"}
+        borderWidth="1px"
+        borderRadius="lg"
         rounded={"md"}
         p={6}
         overflow={"hidden"}
+        onClick={onToggle}
       >
         <Box
           h={"220px"}
@@ -41,7 +42,7 @@ export default function Card(props) {
         </Box>
         <Stack>
           <Text
-            color={MainColor}
+            color={"blue.400"}
             textTransform={"uppercase"}
             fontWeight={800}
             fontSize={"sm"}
@@ -52,7 +53,7 @@ export default function Card(props) {
           <Heading fontSize={"2xl"} fontFamily={"body"}>
             {props.Title2}
 
-            <Button
+            {/* <Button
               float="right"
               size="sm"
               colorScheme="teal"
@@ -60,18 +61,42 @@ export default function Card(props) {
               onClick={handleToggle}
             >
               {show ? "Close" : "Open"}
-            </Button>
+            </Button> */}
           </Heading>
 
-          <Collapse in={show}>
-            <Badge mt={1} mb={3} colorScheme="teal">
-              {props.SkillBadge}
+          <Collapse in={isOpen}>
+            <Badge mt={2} >
+              使用技術
             </Badge>
-            <Text color={"gray.500"} fontSize={"sm"}>
+            <Text fontSize={"sm"} color={"gray.500"}>{props.Skilltext}</Text>
+            <Badge mt={2}>
+              制作期間
+            </Badge>
+            <Text fontSize={"sm"} color={"gray.500"}>{props.term}</Text>
+            <Text mt={3}　fontSize={"sm"} color={"gray.500"} >
               {props.Text}
             </Text>
+
             <Center>
-              <Button w="100%" size="sm" colorScheme="purple" mt={3}>
+              <Button
+                p={4}
+                my={5}
+                mx={4}
+                flex={1}
+                fontSize={"sm"}
+                rounded={"full"}
+                bg={"blue.400"}
+                color={"white"}
+                boxShadow={
+                  "0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)"
+                }
+                _hover={{
+                  bg: "blue.500",
+                }}
+                _focus={{
+                  bg: "blue.500",
+                }}
+              >
                 <Link href={props.SiteURL}>View Portfolio</Link>
               </Button>
             </Center>

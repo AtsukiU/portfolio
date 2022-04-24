@@ -1,17 +1,17 @@
 import React from "react";
 import { Box, Flex } from "@chakra-ui/react";
-import SkillCard from "./SkillCard";
-import HTMLCSSImage from "./pictures/code.png";
-import ReactImage from "./pictures/atom.png";
-import EnglishImage from "./pictures/english.png";
-import SectionTitle from "./SectionTitle";
-import GithubImage from "./pictures/github.png";
+import SkillCard from "../SkillCard";
+import HTMLCSSImage from "../pictures/code.png";
+import ReactImage from "../pictures/atom.png";
+import EnglishImage from "../pictures/english.png";
+import SectionTitle from "../SectionTitle";
+import GithubImage from "../pictures/github.png";
 
 const Skills = () => {
   return (
-    <Box py={10} w="100%" fontWeight={"bold"}>
-      <SectionTitle>Skills</SectionTitle>
-      <Flex  flexWrap={"wrap"} justifyContent="center">
+    <Box>
+      <SectionTitle>Skill</SectionTitle>
+      <Flex flexWrap={"wrap"} justifyContent="center">
         <SkillCard
           SkillCardImage={HTMLCSSImage}
           SkillCardTitle={"HTML&CSS"}

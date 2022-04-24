@@ -3,7 +3,15 @@ import { Box } from "@chakra-ui/react";
 
 const Footer = () => {
   return (
-    <Box color="gray" fontSize="xs" pt="80px" pb="30px">
+    <Box
+      color="gray"
+      fontSize="xs"
+      pt={20}
+      pb={1}
+      w={"100%"}
+      bottom={"0"}
+      align={"center"}
+    >
       &copy; 2022 Atsuki Ueda. All Rights Reserved.{" "}
     </Box>
   );

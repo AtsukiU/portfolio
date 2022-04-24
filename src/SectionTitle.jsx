@@ -1,14 +1,13 @@
 import React from "react";
-import { Heading, Divider } from "@chakra-ui/react";
+import { Heading,Center} from "@chakra-ui/react";
 
 const SectionTitle = (props) => {
   return (
-    <>
-      <Heading size="md" mb={1}>
-        {props.children}
+    <Center   pt={20} pb={20}>
+      <Heading   fontSize={"4xl"}>
+        {props.children} 
       </Heading>
-      <Divider />
-    </>
+    </Center>
   );
 };
 
