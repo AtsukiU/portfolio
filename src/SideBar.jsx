@@ -20,10 +20,10 @@ const SideBar = () => {
             key={nav.label}
             rounded={"md"}
             _hover={{ bg: HoverBgColor, textDecoration: "none" }}
+            to={nav.href}
+            as={RouteLink}
           >
-            <Link my={2} to={nav.href} as={RouteLink}>
-              {nav.label}
-            </Link>
+            <Link my={2}>{nav.label}</Link>
           </Box>
         ))}
       </Stack>
