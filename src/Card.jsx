@@ -12,7 +12,9 @@ import {
   Link,
   Badge,
   useDisclosure,
+  IconButton,
 } from "@chakra-ui/react";
+import { FaAngleDoubleUp, FaAngleDoubleDown } from "react-icons/fa";
 
 export default function Card(props) {
   const { isOpen, onToggle } = useDisclosure();
@@ -27,7 +29,9 @@ export default function Card(props) {
         borderWidth="1px"
         borderRadius="lg"
         rounded={"md"}
-        p={6}
+        px={6}
+        pt={6}
+        pb={2}
         overflow={"hidden"}
       >
         <Box
@@ -59,7 +63,17 @@ export default function Card(props) {
             {props.Title2}
           </Heading>
 
-          <Button
+          <Center>
+            <IconButton
+              icon={isOpen ? <FaAngleDoubleUp /> : <FaAngleDoubleDown />}
+              bg="transparent"
+              size={"md"}
+              color={"gray.300"}
+              onClick={onToggle}
+            ></IconButton>
+          </Center>
+
+          {/* <Button
             mt={2}
             size={"sm"}
             fontSize={"sm"}
@@ -78,7 +92,7 @@ export default function Card(props) {
             onClick={onToggle}
           >
             {isOpen ? "Close" : "See More"}
-          </Button>
+          </Button> */}
 
           <Collapse in={isOpen}>
             <Badge mt={2}>使用技術</Badge>
