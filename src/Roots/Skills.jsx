@@ -72,7 +72,7 @@ const Skills = () => {
           <SkillCard
             SkillCardImage={GithubImage}
             SkillCardTitle={"Github"}
-            SkillCardText={"Git,Githubを使ったレポジトリーの管理,ページの公開"}
+            SkillCardText={"Git,Githubを使ったリポジトリの管理,ページの公開"}
           />
           <SkillCard
             SkillCardImage={EnglishImage}
