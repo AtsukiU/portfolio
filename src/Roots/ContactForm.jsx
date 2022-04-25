@@ -54,6 +54,7 @@ const ContactForm = () => {
         <form onSubmit={handleOnSend}>
           <VStack
             mx={"auto"}
+            mb={20}
             bg={useColorModeValue("white", "gray.900")}
             boxShadow={"2xl"}
             borderWidth="1px"
@@ -61,7 +62,7 @@ const ContactForm = () => {
             rounded={"md"}
             px={{ base: 4, sm: 8, md: 10 }}
             pt={10}
-            pb={15}
+            pb={5}
             overflow={"hidden"}
             w={{ base: 300, sm: 400, md: 700 }}
           >

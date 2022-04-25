@@ -3,7 +3,7 @@ import { Box, Image, Button } from "@chakra-ui/react";
 
 const SkillCard = (props) => {
   return (
-    <Box minW="300" w={300} px={{base:20, sm:14,md:2}} pb={10}>
+    <Box px={{ base: 2, sm: 4, md: 16 }} pb={10}>
       <Box w={"100%"} align={"center"} bg="transparent">
         <Image src={props.SkillCardImage} />
       </Box>

@@ -33,8 +33,8 @@ const Skills = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 3,
+          slidesToScroll: 1,
           initialSlide: 2,
         },
       },
@@ -50,7 +50,7 @@ const Skills = () => {
 
   return (
     <Transitions>
-      <Box w="100%" overflow={"hidden"} align={"center"} pb={20}>
+      <Box  overflow={"hidden"} align={"center"} pb={20}>
         <SectionTitle>Skill</SectionTitle>
 
         <Slider {...settings}>
