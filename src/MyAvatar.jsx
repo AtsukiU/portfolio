@@ -181,7 +181,7 @@ const MyAvatar = () => {
         </Center> */}
       </Box>
       <Collapse in={isOpen} animateOpacity>
-        <Box maxW={500} px={4} mt={23} mx="auto">
+        <Box maxW={1000} px={4} mt={23} mx="auto">
           <Flex pb={2}>
             <Badge h={5} colorScheme="blue">
               出身
@@ -191,7 +191,7 @@ const MyAvatar = () => {
               山梨県
             </Box>
           </Flex>
-          <Flex pb={2}>
+          <Flex pb={4}>
             <Badge h={5} colorScheme="blue">
               年齢
             </Badge>
@@ -200,7 +200,7 @@ const MyAvatar = () => {
               24歳
             </Box>
           </Flex>
-          <Flex pb={2}>
+          <Flex pb={4}>
             {" "}
             <Badge h={5} colorScheme="blue">
               趣味
@@ -210,22 +210,30 @@ const MyAvatar = () => {
               気になったら取り敢えず挑戦してみるタイプなので、ギター弾いたり、アクアリウム始めたり、パソコン組んでみたり、英語の勉強してみたり、色々なことに挑戦しています。中高サッカー部なのでサッカーも大好きで、定期的にやってます。
             </Box>
           </Flex>
-          <Flex pb={2}>
+          <Flex pb={4}>
             <Badge h={5} colorScheme="blue">
               長所
             </Badge>
             　
             <Box fontSize="sm" pl={6}>
-              好きなことへの集中力・継続力には自信があります。
+              好きなことへの集中力・継続力には自信があります。自分の目標への継続力には自信があります。
             </Box>
           </Flex>
-          <Flex pb={2}>
+          <Flex pb={4}>
             <Badge h={5} colorScheme="blue">
               自己紹介
             </Badge>
             　
-            <Box fontSize="sm">
-              山梨県生まれ。大学卒業後某金融機関に勤務。プログラミングに興味を持ち、独学で学習。一月から学習を開始し、日々技術をアップデートしています。今後はフロントエンド・バックエンド問わず学習してみたいと思っています。
+            <Box fontSize="sm" overflowWrap="wrap">
+              山梨県生まれ。大学卒業後某金融機関に勤務。サービス開発をするエンジニアやweb製作に興味があります。独学で学習中。
+              <br />
+              現在reactでchakraUI、FramerMotion、ReactRouter、FireBaseなどの技術を身につけています。Nextjs・PHPも学習中。
+              <br />
+              フロント・バックエンド問わず、今後も学習し、価値を生み出せるエンジニアになりたいと考えています。
+              <br />
+              常に新しいことに挑戦することが自分のモチベーションであることに気づき、移り変わりが激しく常に学習の必要があるITの世界に身を置きたいと考えました。
+              今後も新しい知識をアップデートし続け、自分ではなくてはダメだと思わせるようなエンジニアになりたいと考えています。
+              この業界に情熱を注げる自信がありますので、是非お声がけ頂ければと思います。
             </Box>
           </Flex>
         </Box>
