@@ -129,7 +129,9 @@ const MyAvatar = () => {
                   boxShadow={
                     "0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)"
                   }
-                  onClick={onToggle}
+                  as={RouteLink}
+                  to={"/portfolio"}
+                  // onClick={onToggle}
                   _hover={{
                     bg: "blue.500",
                   }}
@@ -137,76 +139,74 @@ const MyAvatar = () => {
                     bg: "blue.500",
                   }}
                 >
-                  {isOpen ? "Close" : "See More"}
+                  {/* {isOpen ? "Close" : "See More"} */}
+                  Portfolio
                 </Button>
               </Stack>
             </Stack>
           </Stack>
         </Center>
       </Box>
-      <Collapse in={isOpen} animateOpacity>
-        <Box maxW={"3xl"} px={4} mt={23} mx="auto">
-          <Flex pb={2}>
-            <Badge h={5} colorScheme="blue">
-              出身
-            </Badge>
-            　
-            <Box fontSize="sm" pl={6}>
-              山梨県
-            </Box>
-          </Flex>
-          <Flex pb={4}>
-            <Badge h={5} colorScheme="blue">
-              年齢
-            </Badge>
-            　
-            <Box fontSize="sm" pl={6}>
-              24歳
-            </Box>
-          </Flex>
-          <Flex pb={4}>
-            {" "}
-            <Badge h={5} colorScheme="blue">
-              趣味
-            </Badge>
-            　
-            <Box fontSize="sm" pl={6}>
-              気になったら取り敢えず挑戦してみるタイプなので、ギター弾いたり、アクアリウム始めたり、パソコン組んでみたり、英語の勉強してみたり、本を読んだり、色々なことに挑戦しています。中高サッカー部なのでサッカーも大好きで、定期的にやってます。
-            </Box>
-          </Flex>
-          <Flex pb={4}>
-            <Badge h={5} colorScheme="blue">
-              長所
-            </Badge>
-            　
-            <Box fontSize="sm" pl={6}>
-              やると決めた時の継続力・集中力には自信があります。
-            </Box>
-          </Flex>
-          <Flex pb={4}>
-            <Badge h={5} colorScheme="blue">
-              自己紹介
-            </Badge>
-            　
-            <Box fontSize="sm" overflowWrap="wrap">
-              山梨県生まれ。大学卒業後某インフラ系企業に勤務。サービス開発をするエンジニアやweb製作に興味があります。1月から独学で学習中。
-              <br />
-              常に新しいことに挑戦することが自分のモチベーションであることに気づき、移り変わりが激しく常に学習の必要があるITの世界に身を置きたいと考えました。
-              今後も新しい知識をアップデートし続け、自分ではなくてはダメだと思わせるようなエンジニアになりたいと考えています。
-              この業界に情熱を注げる自信がありますので、是非お声がけ頂ければと思います。
-            </Box>
-          </Flex>
-          <Flex pb={4}>
-            <Badge h={5} colorScheme="blue">
-              資格
-            </Badge>
-            　
-            <Box fontSize="sm" pl={6}>
-              TOEIC 850
-            </Box>
-          </Flex>
-        </Box>
-      </Collapse>
+
+      <Box maxW={"3xl"} px={4} mt={23} mx="auto">
+        <Flex pb={2}>
+          <Badge h={5} colorScheme="blue">
+            出身
+          </Badge>
+          　
+          <Box fontSize="sm" pl={6}>
+            山梨県
+          </Box>
+        </Flex>
+        <Flex pb={4}>
+          <Badge h={5} colorScheme="blue">
+            年齢
+          </Badge>
+          　
+          <Box fontSize="sm" pl={6}>
+            24歳
+          </Box>
+        </Flex>
+        <Flex pb={4}>
+          {" "}
+          <Badge h={5} colorScheme="blue">
+            趣味
+          </Badge>
+          　
+          <Box fontSize="sm" pl={6}>
+            気になったら取り敢えず挑戦してみるタイプなので、ギター弾いたり、アクアリウム始めたり、パソコン組んでみたり、英語の勉強してみたり、本を読んだり、色々なことに挑戦しています。中高サッカー部なのでサッカーも大好きで、定期的にやってます。
+          </Box>
+        </Flex>
+        <Flex pb={4}>
+          <Badge h={5} colorScheme="blue">
+            長所
+          </Badge>
+          　
+          <Box fontSize="sm" pl={6}>
+            やると決めた時の継続力・集中力には自信があります。
+          </Box>
+        </Flex>
+        <Flex pb={4}>
+          <Badge h={5} colorScheme="blue">
+            自己紹介
+          </Badge>
+          　
+          <Box fontSize="sm" overflowWrap="wrap">
+            山梨県生まれ。大学卒業後某インフラ系企業に勤務。
+            常に新しいことに挑戦することや、自分で何かを作ることが自分のモチベーションであることに気づき、ITの世界に身を置きたいと考えました。
+            今後も新しい知識をアップデートし続けて行きます。お声がけ頂ければと思います。
+          </Box>
+        </Flex>
+        <Flex pb={4}>
+          <Badge h={5} colorScheme="blue">
+            資格
+          </Badge>
+          　
+          <Box fontSize="sm" pl={6}>
+            TOEIC 850
+          </Box>
+        </Flex>
+      </Box>
     </Box>
   );
 };
