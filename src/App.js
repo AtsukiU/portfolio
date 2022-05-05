@@ -5,13 +5,13 @@ import { Box } from "@chakra-ui/react";
 
 function App() {
   return (
-    <div className="App">
+    <Box className="App">
       <Header />
-      <Box>
+      <Box minH="100vh">
         <Router />
       </Box>
       <Footer />
-    </div>
+    </Box>
   );
 }
 

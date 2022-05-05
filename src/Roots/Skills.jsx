@@ -1,87 +1,115 @@
 import React from "react";
-import { Box, Flex } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Stack,
+  Heading,
+  SimpleGrid,
+  Container,
+  Text,
+  Image,
+  Avatar,
+} from "@chakra-ui/react";
 import SkillCard from "../SkillCard";
+
 import HTMLCSSImage from "../pictures/code.png";
 import ReactImage from "../pictures/atom.png";
 import EnglishImage from "../pictures/english.png";
-import SectionTitle from "../SectionTitle";
 import GithubImage from "../pictures/github.png";
+import NextImage from "../pictures/nextjs.png";
+
+import SectionTitle from "../SectionTitle";
 import Transitions from "../Transitions";
-import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 const Skills = () => {
   const settings = {
     infinite: true,
-    speed: 4000,
-    autoplaySpeed: 1,
+    speed: 3000,
+    autoplaySpeed: 3000,
     autoplay: true,
-    slidesToShow: 3,
-    dots: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+    centerMode: true,
+    slidesToShow: 4,
+    slidesToScrool: 1,
+    centerPadding: 50,
+    cssEase: "linear",
   };
 
+  const SliderImages = [
+    HTMLCSSImage,
+    ReactImage,
+    EnglishImage,
+    GithubImage,
+    NextImage,
+  ];
+
   return (
-    <Transitions>
-      <Box  overflow={"hidden"} align={"center"} pb={20}>
-        <SectionTitle>Skill</SectionTitle>
+    <Box p={4}>
+      <Stack
+        py={10}
+        spacing={4}
+        as={Container}
+        maxW={"3xl"}
+        textAlign={"center"}
+      >
+        <Heading fontSize={"3xl"}>Skills</Heading>
+        <Text color={"gray.600"} fontSize={"xl"}>
+          現在習得している言語・技術・フレームワーク・ライブラリなど
+        </Text>
+      </Stack>
 
-        <Slider {...settings}>
+      <Container maxW={"6xl"} mt={10}>
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
           <SkillCard
-            SkillCardImage={HTMLCSSImage}
             SkillCardTitle={"HTML&CSS"}
-            SkillCardText={
-              "HTML&CSSの基礎的な技術。HTML&CSSを用いたレイアウト。"
-            }
+            SkillCardText={"HTML&CSSを用いたレイアウト。"}
           />
           <SkillCard
-            SkillCardImage={ReactImage}
-            SkillCardTitle={"Javascript React"}
-            SkillCardText={
-              "Javascript、ReactでのWebサイト・Webアプリの制作。ChakraUI,StyledCompornent,FramerMotion,ReactRouter使用経験あり。"
-            }
-          />
-
-          <SkillCard
-            SkillCardImage={GithubImage}
             SkillCardTitle={"Github"}
-            SkillCardText={"Git,Githubを使ったリポジトリの管理,ページの公開"}
+            SkillCardText={"Git・Githubを使ったリポジトリの管理,ページの公開"}
           />
           <SkillCard
-            SkillCardImage={EnglishImage}
             SkillCardTitle={"English"}
             SkillCardText={"TOEIC L&R 850取得。ビジネスレベルの英語力。"}
           />
+          <SkillCard
+            SkillCardTitle={"Javascript"}
+            SkillCardText={
+              "React・NEXTを使用したSPAでのWEB製作・WEBアプリの作成。 "
+            }
+          />
+
+          <SkillCard
+            SkillCardTitle={"CSS Framework"}
+            SkillCardText={"ChakraUI・TailwindCSS"}
+          />
+
+          <SkillCard
+            SkillCardTitle={"Animation"}
+            SkillCardText={"FramerMotion・ReactSlick"}
+          />
+        </SimpleGrid>
+      </Container>
+
+      <Box my="20" justifyContent="center" mx="auto">
+        <Slider {...settings}>
+          {SliderImages.map((img, index) => {
+            return (
+              <Box key={index}>
+                <Image
+                  objectFit="cover"
+                  boxSize={{ base: "20", sm: "100", md: "130", lg: "130" }}
+                  src={img}
+                />
+              </Box>
+            );
+          })}
         </Slider>
       </Box>
-    </Transitions>
+    </Box>
   );
 };
 

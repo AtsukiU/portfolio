@@ -1,20 +1,26 @@
 import React from "react";
-import { Box, Image, Button } from "@chakra-ui/react";
+import {
+  Box,
+  Image,
+  Button,
+  Text,
+  Icon,
+  VStack,
+  HStack,
+} from "@chakra-ui/react";
+import { CheckIcon } from '@chakra-ui/icons';
 
 const SkillCard = (props) => {
   return (
-    <Box px={{ base: 2, sm: 4, md: 16 }} maxW={400} pb={10}>
-      <Box w={"100%"} align={"center"} bg="transparent">
-        <Image src={props.SkillCardImage} />
+    <HStack align={"top"}>
+      <Box color={"blue.400"} px={2}>
+        <Icon  as={CheckIcon}/>
       </Box>
-
-      <Box pt={4} fontSize={"xl"} fontWeight={"bold"}>
-        {props.SkillCardTitle}
-      </Box>
-      <Box pt={1} fontSize={"sm"} color={"gray.500"}>
-        {props.SkillCardText}
-      </Box>
-    </Box>
+      <VStack align={"start"}>
+        <Text fontWeight={600}>{props.SkillCardTitle}</Text>
+        <Text color={"gray.600"}>{props.SkillCardText}</Text>
+      </VStack>
+    </HStack>
   );
 };
 

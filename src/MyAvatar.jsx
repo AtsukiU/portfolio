@@ -21,42 +21,8 @@ const MyAvatar = () => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box pb={5}>
+    <Box pb={5} mt={5}>
       <Box>
-        {/* <Flex pt="20px" justifyContent="center">
-          <Avatar
-            size="2xl"
-            src={AvatarImage}
-            layout="fill"
-            boxShadow="2xl"
-            borderColor="white"
-            borderWidth={2}
-            borderStyle="solid"
-          ></Avatar>
-          <Box pl={5}>
-            <Text
-              alignItems="none"
-              fontSize="3xl"
-              fontWeight="bold"
-              pt={"15px"}
-            >
-              Atsuki Ueda
-            </Text>
-
-            <Text color="gray" fontSize={"md"}>
-              植田 充輝
-              <br />
-              1998.02.06 Age24
-            </Text>
-            <IconButton
-              icon={isOpen ? <FaAngleDoubleUp /> : <FaAngleDoubleDown />}
-              mt={5}
-              bg="transparent"
-              onClick={onToggle}
-            ></IconButton>
-          </Box>
-        </Flex> */}
-
         <Center py={6}>
           <Stack
             borderWidth="1px"
@@ -69,7 +35,12 @@ const MyAvatar = () => {
             padding={4}
           >
             <Flex flex={1} bg="blue.200">
-              <Image objectFit="cover" boxSize="100%" src={AvatarImage} />
+              <Image
+                objectFit="cover"
+                boxSize="100%"
+                maxH="400"
+                src={AvatarImage}
+              />
             </Flex>
             <Stack
               flex={1}
@@ -172,16 +143,9 @@ const MyAvatar = () => {
             </Stack>
           </Stack>
         </Center>
-        {/* <Center>
-          <IconButton
-            icon={isOpen ? <FaAngleDoubleUp /> : <FaAngleDoubleDown />}
-            bg="transparent"
-            onClick={onToggle}
-          ></IconButton>
-        </Center> */}
       </Box>
       <Collapse in={isOpen} animateOpacity>
-        <Box maxW={1000} px={4} mt={23} mx="auto">
+        <Box maxW={"3xl"} px={4} mt={23} mx="auto">
           <Flex pb={2}>
             <Badge h={5} colorScheme="blue">
               出身
@@ -216,7 +180,7 @@ const MyAvatar = () => {
             </Badge>
             　
             <Box fontSize="sm" pl={6}>
-              好きなことへの集中力・継続力には自信があります。自分の目標への継続力には自信があります。
+              やると決めた時の継続力・集中力には自信があります。
             </Box>
           </Flex>
           <Flex pb={4}>
@@ -226,11 +190,6 @@ const MyAvatar = () => {
             　
             <Box fontSize="sm" overflowWrap="wrap">
               山梨県生まれ。大学卒業後某インフラ系企業に勤務。サービス開発をするエンジニアやweb製作に興味があります。1月から独学で学習中。
-              <br />
-              現在reactでchakraUI、FramerMotion、ReactRouter、FireBaseなどの技術を身につけています。Nextjs・PHPも学習中。
-              <br />
-              フロント・バックエンド問わず、今後も学習し、価値を生み出せるエンジニアになりたいと考えています。
-              <br />
               <br />
               常に新しいことに挑戦することが自分のモチベーションであることに気づき、移り変わりが激しく常に学習の必要があるITの世界に身を置きたいと考えました。
               今後も新しい知識をアップデートし続け、自分ではなくてはダメだと思わせるようなエンジニアになりたいと考えています。
