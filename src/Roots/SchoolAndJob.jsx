@@ -21,7 +21,7 @@ const SchoolAndJob = () => {
             overflow={"hidden"}
             flexWrap={"wrap"}
           >
-            <Box>某インフラ系企業</Box>　<Box color={"gray"}>2020.4 - 2022</Box>
+            <Box>日本郵便株式会社</Box>　<Box color={"gray"}>2020.4 - 2022</Box>
           </Flex>
           <Flex
             p={6}

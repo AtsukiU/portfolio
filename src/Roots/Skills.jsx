@@ -84,7 +84,7 @@ const Skills = () => {
 
           <SkillCard
             SkillCardTitle={"CSS Framework"}
-            SkillCardText={"ChakraUI・TailwindCSS"}
+            SkillCardText={"ChakraUI・TailwindCSS・StyledComponent"}
           />
 
           <SkillCard
@@ -101,7 +101,7 @@ const Skills = () => {
               <Box key={index}>
                 <Image
                   objectFit="cover"
-                  boxSize={{ base: "20", sm: "100", md: "130", lg: "130" }}
+                  boxSize={{ base: "12", sm: "50", md: "100", lg: "130" }}
                   src={img}
                 />
               </Box>
