@@ -3,6 +3,7 @@ import Card from "./Card";
 import { Flex, Box, Center } from "@chakra-ui/react";
 import PostItMemo from "./pictures/screencapture-localhost-3001-2022-04-13-23_06_31.png";
 import MyPortfolioImage from "./pictures/MyPortfolio.png";
+import ecImage from "./pictures/screencapture-localhost-3002-2022-05-08-01_51_29.png";
 import edit from "./pictures/New file.png";
 import SectionTitle from "./SectionTitle";
 
@@ -35,13 +36,11 @@ const Cards = () => {
             SiteURL={"https://react-post-it.vercel.app/"}
           />
           <Card
-            Title1={"PHP+(next.js or react)"}
+            Title1={"NEXT.js"}
             Title2={"EC(作成中)"}
-            image={edit}
-            Skilltext={"(#FramerMotion + #chakraUI) "}
-            Text={
-              " ECデモサイトをバックエンドをPHP、フロントはreactかnextjsで作成予定"
-            }
+            image={ecImage}
+            Skilltext={"#TailwindCSS"}
+            Text={" ECデモサイトをフロントはNext.jsで作成。"}
             SiteURL={""}
           />
         </Flex>

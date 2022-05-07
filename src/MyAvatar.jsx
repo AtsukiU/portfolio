@@ -168,6 +168,17 @@ const MyAvatar = () => {
           </Box>
         </Flex>
         <Flex pb={4}>
+          <Badge h={5} colorScheme="blue">
+            自己紹介
+          </Badge>
+          　
+          <Box fontSize="sm" overflowWrap="wrap">
+            山梨県生まれ。大学卒業後某インフラ金融系企業に営業・事務として勤務。<br/>
+            働く中で常に新しいことに挑戦することや、自分で何かを作ることが自分のモチベーションであると再認識し、ITの世界に身を置きたいと考えました。
+            今後も新しい知識をアップデートし続けて行きます。お声がけ頂ければと思います。
+          </Box>
+        </Flex>
+        <Flex pb={4}>
           {" "}
           <Badge h={5} colorScheme="blue">
             趣味
@@ -183,27 +194,17 @@ const MyAvatar = () => {
           </Badge>
           　
           <Box fontSize="sm" pl={6}>
-            やると決めた時の継続力・集中力には自信があります。
+            継続力・集中力には自信があります。
           </Box>
         </Flex>
-        <Flex pb={4}>
-          <Badge h={5} colorScheme="blue">
-            自己紹介
-          </Badge>
-          　
-          <Box fontSize="sm" overflowWrap="wrap">
-            山梨県生まれ。大学卒業後某インフラ系企業に勤務。
-            常に新しいことに挑戦することや、自分で何かを作ることが自分のモチベーションであることに気づき、ITの世界に身を置きたいと考えました。
-            今後も新しい知識をアップデートし続けて行きます。お声がけ頂ければと思います。
-          </Box>
-        </Flex>
+
         <Flex pb={4}>
           <Badge h={5} colorScheme="blue">
             資格
           </Badge>
           　
           <Box fontSize="sm" pl={6}>
-            TOEIC 850
+            TOEIC 850 普通自動車免許
           </Box>
         </Flex>
       </Box>
