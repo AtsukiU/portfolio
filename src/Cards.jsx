@@ -3,7 +3,7 @@ import Card from "./Card";
 import { Flex, Box, Center } from "@chakra-ui/react";
 import PostItMemo from "./pictures/screencapture-localhost-3001-2022-04-13-23_06_31.png";
 import MyPortfolioImage from "./pictures/MyPortfolio.png";
-import ecImage from "./pictures/screencapture-localhost-3002-2022-05-08-01_51_29.png";
+import ecImage from "./pictures/screencapture-localhost-3001-2022-05-08-19_26_22.png";
 import edit from "./pictures/New file.png";
 import SectionTitle from "./SectionTitle";
 
@@ -40,8 +40,11 @@ const Cards = () => {
             Title2={"EC(作成中)"}
             image={ecImage}
             Skilltext={"#TailwindCSS"}
-            Text={" ECデモサイトをフロントはNext.jsで作成。"}
-            SiteURL={""}
+            term={"製作中"}
+            Text={
+              " ECデモサイトをフロントはNext.jsで作成。SPA。グリッドレイアウトを活用。"
+            }
+            SiteURL={"https://ec-demo-tau.vercel.app/"}
           />
         </Flex>
       </Center>
