@@ -7,11 +7,12 @@ import {
   useDisclosure,
   Stack,
   Collapse,
+  Center,
 } from "@chakra-ui/react";
 import { useColorMode, useColorModeValue } from "@chakra-ui/color-mode";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { Link as RouteLink } from "react-router-dom";
-import { FaSun } from "react-icons/fa";
+import { FaGithub, FaSun } from "react-icons/fa";
 import { BsMoonStarsFill } from "react-icons/bs";
 import HeaderLogoLight from "./pictures/logo teal.400.png";
 import HeaderLogoDark from "./pictures/logo teal.png";
@@ -24,6 +25,7 @@ function Header() {
   const HoverBgColor = useColorModeValue("gray.100", "gray.600");
 
   const navItem = [
+    { label: "Home", href: "/" },
     { label: "Portfolio", href: "/portfolio" },
     { label: "Skill", href: "/skill" },
     { label: "Experience", href: "/experience" },
@@ -92,14 +94,26 @@ function Header() {
           </Flex>
         </Flex>
 
-        <Stack flex={{ base: 1, md: 0 }} justify={"flex-end"} direction={"row"}>
+        <Center
+          flex={{ base: 1, md: 0 }}
+          justify={"flex-end"}
+          direction={"row"}
+        >
+          <a href="https://github.com/AtsukiU">
+            <IconButton
+              icon={<FaGithub />}
+              color={isDark ? "gray.100" : "gray.500"}
+              bg="transparent"
+              size="lg"
+            ></IconButton>
+          </a>
           <IconButton
             icon={isDark ? <FaSun /> : <BsMoonStarsFill />}
             color={isDark ? "gray.600" : "white"}
             bg={isDark ? "orange.100" : "blue.400"}
             onClick={toggleColorMode}
           ></IconButton>
-        </Stack>
+        </Center>
       </Flex>
       <Collapse in={isOpen} animateOpacity>
         <Box>

@@ -25,7 +25,7 @@ export default function Card(props) {
         w={"270px"}
         minW={"270px"}
         bg={useColorModeValue("white", "gray.900")}
-        boxShadow={"2xl"}
+        boxShadow={"md"}
         borderWidth="1px"
         borderRadius="lg"
         rounded={"md"}

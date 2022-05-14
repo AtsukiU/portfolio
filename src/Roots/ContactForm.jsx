@@ -56,7 +56,7 @@ const ContactForm = () => {
             mx={"auto"}
             mb={20}
             bg={useColorModeValue("white", "gray.900")}
-            boxShadow={"2xl"}
+            boxShadow={"md"}
             borderWidth="1px"
             borderRadius="lg"
             rounded={"md"}

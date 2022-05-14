@@ -31,7 +31,7 @@ const MyAvatar = () => {
             mx={{ base: "20px", md: "20px" }}
             direction={{ base: "column", md: "row" }}
             bg={useColorModeValue("white", "gray.900")}
-            boxShadow={"2xl"}
+            boxShadow={"xl"}
             padding={4}
           >
             <Flex flex={1} bg="blue.200">
@@ -64,9 +64,6 @@ const MyAvatar = () => {
               >
                 Web engineer from Yamanashi Japan.I love design and new
                 technology.
-                <Link href={"https://github.com/AtsukiU/"} color={"blue.400"}>
-                  Github＠AtsukiU
-                </Link>
               </Text>
               <Stack
                 align={"center"}
@@ -173,7 +170,8 @@ const MyAvatar = () => {
           </Badge>
           　
           <Box fontSize="sm" overflowWrap="wrap">
-            山梨県生まれ。大学卒業後某インフラ金融系企業に営業・事務として勤務。<br/>
+            山梨県生まれ。大学卒業後某インフラ金融系企業に営業・事務として勤務。
+            <br />
             働く中で常に新しいことに挑戦することや、自分で何かを作ることが自分のモチベーションであると再認識し、ITの世界に身を置きたいと考えました。
             今後も新しい知識をアップデートし続けて行きます。お声がけ頂ければと思います。
           </Box>

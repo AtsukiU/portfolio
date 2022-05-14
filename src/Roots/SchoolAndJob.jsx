@@ -14,7 +14,7 @@ const SchoolAndJob = () => {
             p={6}
             mt={6}
             bg={useColorModeValue("white", "gray.900")}
-            boxShadow={"2xl"}
+            boxShadow={"md"}
             borderWidth="1px"
             borderRadius="lg"
             rounded={"md"}
@@ -27,7 +27,7 @@ const SchoolAndJob = () => {
             p={6}
             mt={6}
             bg={useColorModeValue("white", "gray.900")}
-            boxShadow={"2xl"}
+            boxShadow={"md"}
             borderWidth="1px"
             borderRadius="lg"
             rounded={"md"}
