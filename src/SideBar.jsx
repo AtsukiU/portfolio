@@ -5,6 +5,7 @@ import { useColorModeValue } from "@chakra-ui/color-mode";
 
 const SideBar = () => {
   const navItem = [
+    { label: "Home", href: "/" },
     { label: "Portfolio", href: "/portfolio" },
     { label: "Skill", href: "/skill" },
     { label: "Experience", href: "/experience" },

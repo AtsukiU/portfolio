@@ -7,8 +7,9 @@ import { motion } from "framer-motion";
 const SchoolAndJob = () => {
   return (
     <Transitions>
-      <Box fontWeight="bold" w={"100%"} h="100vh">
+      <Box fontWeight="bold" h="100vh">
         <SectionTitle>Education and Work Experience</SectionTitle>
+
         <Box w={"84%"} mx="auto" justifyContent={"center"}>
           <Flex
             p={6}
@@ -21,7 +22,8 @@ const SchoolAndJob = () => {
             overflow={"hidden"}
             flexWrap={"wrap"}
           >
-            <Box>日本郵便株式会社</Box>　<Box color={"gray"}>2020.4 - 2022</Box>
+            <Box>インフラ系企業・営業事務</Box>　
+            <Box color={"gray"}>2020.4 - 2022</Box>
           </Flex>
           <Flex
             p={6}
