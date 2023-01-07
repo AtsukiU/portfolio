@@ -6,6 +6,7 @@ import MyPortfolioImage from "./pictures/MyPortfolio.png";
 import ecImage from "./pictures/screencapture-localhost-3001-2022-05-08-19_26_22.png";
 import edit from "./pictures/New file.png";
 import SectionTitle from "./SectionTitle";
+import Portfolio2 from "./pictures/PortFolio.png";
 
 const Cards = () => {
   return (
@@ -45,6 +46,15 @@ const Cards = () => {
               " ECデモサイトをフロントはNext.jsで作成。SPA。グリッドレイアウトを活用。"
             }
             SiteURL={"https://ec-demo-tau.vercel.app/"}
+          />
+          <Card
+            Title1={"NEXT.js"}
+            Title2={"Portfolio2"}
+            image={Portfolio2}
+            Skilltext={"#TailwindCSS"}
+            term={"2ヶ月"}
+            Text={"ポートフォリオサイトは新サイトへ移行しました。"}
+            SiteURL={""}
           />
         </Flex>
       </Center>

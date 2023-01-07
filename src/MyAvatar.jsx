@@ -51,10 +51,10 @@ const MyAvatar = () => {
               pt={2}
             >
               <Heading fontSize={"2xl"} fontFamily={"body"}>
-                Atsuki Ueda
+                AUZ
               </Heading>
               <Text fontSize="sm" fontWeight={600} color={"gray.500"} mb={4}>
-                植田 充輝
+                Atsuki.U
               </Text>
               <Text
                 textAlign={"center"}

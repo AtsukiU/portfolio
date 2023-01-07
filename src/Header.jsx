@@ -81,6 +81,7 @@ function Header() {
                 <Link
                   ml={7}
                   px={1}
+                  z
                   key={nav.label}
                   to={nav.href}
                   as={RouteLink}
